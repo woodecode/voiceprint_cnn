@@ -1,0 +1,8 @@
+# ignore .vs folder
+/.vscode/
+
+# ignore audio folder
+/audio/
+
+# ignore python cache folder
+/code/__pycache__/
