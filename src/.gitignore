@@ -1,0 +1,5 @@
+# vscode and idea config folder
+/.vscode/
+/.idea/
+# python cache folder
+/__pycache__/

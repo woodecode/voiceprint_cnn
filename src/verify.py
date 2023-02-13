@@ -1,7 +1,6 @@
-import tensorflow as tf
 import numpy as np
+import tensorflow as tf
 import create_data
-import voicecnn
 
 if __name__ == '__main__':
     
@@ -18,15 +17,16 @@ if __name__ == '__main__':
 
     # extract mfcc of this wav audio
     mfcc_data = create_data.mfcc_generator(wav_file=wav_file_path)
+    # fit input shape
     mfcc_data = np.expand_dims(mfcc_data, axis=-1)
     mfcc_data = np.expand_dims(mfcc_data, axis=0)
     print('shape:', np.shape(mfcc_data))
     # load model
-    model = tf.keras.models.load_model('../model/model_20230209_0138.h5')
+    model = tf.keras.models.load_model(filepath='../model/model_20230209_1533.h5')
     # model = voivecnn.VoiceVerificationCNN(input_shape=(32,171,1),output_shape=4)
     # model.load_weights('../model/model_20230209_0138.h5')
 
-    print (model.predict(mfcc_data))
+    print(model.predict(mfcc_data))
 
 
 

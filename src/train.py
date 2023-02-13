@@ -1,23 +1,22 @@
+import numpy as np
 import tensorflow as tf
 import voicecnn
-import numpy as np
-import create_data
 
 if __name__ == '__main__':
     # test whether this environment support GPU training
     print(tf.config.list_physical_devices('GPU'))
     # create model
-    # model = voivecnn.VoiceVerificationCNN((32, 171, 1), 4)
-    model = voicecnn.create_model((32, 171, 1), 4)
+    model = voicecnn.VoiceVerificationCNN((32, 22, 1), 4)
 
     dataset_file_path = 'dataset.npy'
     labels_file_path = 'labels.npy'
 
-    # dataset
+    # load dataset
     dataset = np.load(dataset_file_path,allow_pickle=True)
     dataset = tf.convert_to_tensor(dataset)
     print('dataset ', np.shape(dataset))
 
+    # load labels and convert into one-hot encoded labels
     labels = np.load(labels_file_path,allow_pickle=True)
     # Convert the string labels into integer labels
     unique_labels = list(set(labels))
@@ -33,6 +32,8 @@ if __name__ == '__main__':
                   loss='categorical_crossentropy',
                   metrics=['accuracy'])
     
-    model.fit(x=dataset,y=one_hot_labels,epochs=800, batch_size=64)
+    model.fit(x=dataset,y=one_hot_labels,epochs=500, batch_size=20)
+
+    # save the model
     # model.save_weights('../model/model_20230209_0121.h5')
-    tf.keras.models.save_model(model=model, filepath='../model/model_20230209_0218.h5')
+    tf.keras.models.save_model(model=model, filepath='../model/model_20230209_1533.h5')
