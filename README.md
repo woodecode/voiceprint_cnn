@@ -4,11 +4,11 @@
 
 ...
 
-## file tree
+## File Tree
 
 .
 
-> audio
+> audio (not uploaded)
 >
 > >aaa (example)
 > >
@@ -26,17 +26,17 @@
 >
 > src
 >
-> >create_data.py 
+> >**create_data.py** 
 > >
 > >dataset.npy 
 > >
 > >labels.npy 
 > >
-> >voicecnn.py 
+> >**voicecnn.py** 
 > >
-> >train.py 
+> >**train.py** 
 > >
-> >verify.py 
+> >**verify.py** 
 > >
 > >test.ipynb 
 >
@@ -49,5 +49,20 @@
 > >model_weight_20230209_0119.h5
 > >
 > >model_weight_20230209_0121.h5
+> >
+>
+> c_code
+>
+> > libs
+> >
+> > >**normalize_2d.h**
+> > >
+> > >**normalize_2d.c**
+> > >
+> > >**trim_audio.h**
+> > >
+> > >**trim_audio.c**
+> >
+> > main.c 
 
 ...
