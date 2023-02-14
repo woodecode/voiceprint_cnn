@@ -15,7 +15,7 @@ typedef double _normailze2d_ret_type_;
 void normalize2D(_normailze2d_ret_type_ (*arr_ret)[COL_2D], 
                     _normailze2d_src_type_ (*arr_src)[COL_2D]);
 
-void normalize2D_test(void);
+
 
 #ifdef __cplusplus
 }

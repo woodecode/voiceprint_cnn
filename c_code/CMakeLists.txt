@@ -19,7 +19,7 @@ file(GLOB_RECURSE SOURCES
     "libs/*.c"
 )
 
-set(CMAKE_BUILD_TYPE "Debug")
+# set(CMAKE_BUILD_TYPE "Debug")
 
 add_executable(proj main.c ${SOURCES})
 

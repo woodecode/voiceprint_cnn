@@ -6,8 +6,19 @@
 
 #include <stdint-gcc.h>
 
-void trimAudio(uint16_t *trim_data, uint16_t trim_len,uint8_t threshold_db, 
-                uint16_t *raw_data, uint16_t raw_len);
+typedef struct 
+{
+    double *raw_data;
+    uint32_t raw_len;
+    double *trim_data;
+    uint32_t trim_len;
+    uint32_t sr;
+    uint16_t frame_length;
+    uint16_t hop_length;
+    uint8_t threshold_db;
+} AudioTrimConfig;
+
+int trimAudio(AudioTrimConfig *config);
 
 #ifdef __cpluscplus
 #endif

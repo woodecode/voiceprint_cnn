@@ -1,6 +1,6 @@
 # vscode config folder
 /.vscode/
 # cmake build cache file
-/build/
+/build/**
 # other files
 *.exe
