@@ -4,7 +4,7 @@
 #ifdef __cpluscplus
 #endif
 
-#include <stdint-gcc.h>
+#include <stdint.h>
 
 typedef struct 
 {

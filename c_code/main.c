@@ -6,6 +6,7 @@
 void normalize2D_test(void);
 void trimAudio_test(void);
 
+
 int main(int argc, char const *argv[])
 {
     normalize2D_test();
@@ -47,3 +48,6 @@ void trimAudio_test(void)
 {
 
 }
+
+
+

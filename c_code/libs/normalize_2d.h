@@ -5,7 +5,7 @@
 extern "C"{
 #endif
 
-#define ROW_2D 5
+#define ROW_2D 8
 #define COL_2D 8
 
 typedef double _normailze2d_src_type_;

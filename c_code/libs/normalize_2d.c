@@ -30,7 +30,7 @@ void normalize2D(_normailze2d_ret_type_ (*arr_ret)[COL_2D], _normailze2d_src_typ
      */
     for (j = 0; j < COL_2D; j++) {
         /* store min and max position of value */
-        int min_pos, max_pos = 0;
+        int min_pos = 0, max_pos = 0;
         /* find min and max position of value */
         for (i = 0; i < ROW_2D; i++) {
             if(arr_src[i][j] > arr_src[max_pos][j]) max_pos = i; 
